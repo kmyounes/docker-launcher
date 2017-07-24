@@ -38,7 +38,7 @@ def printUsage(error = False):
     if error:
         print ("Unknown option or missing argument.")
     print("""
-    Usage: docker [options] <containers List file>
+    Usage: ./docker-launcher [options] <containers list file>
 
     -h, --help              show this help
     -f, --file             use specific file
@@ -53,10 +53,9 @@ def start_containers(f):
         print(entry)
         try:
             container=dock.containers.get(entry)
+            container.start()
         except docker.errors.NotFound as err:
             print(err.args)
-        try:
-            container.start()
         except docker.errors.APIError as err:
             print(err.args)
 
