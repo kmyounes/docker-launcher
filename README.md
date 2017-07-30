@@ -1,6 +1,9 @@
+# Docker-Launcher
+----
+
 [![Build status][travis-image]][travis-url]
-[travis-image]:https://travis-ci.org/kmyounes/docker-launcher.svg?branch=master
-[travis-url]:https://travis-ci.org/kmyounes/docker-launcher
+[travis-image]: https://travis-ci.org/kmyounes/docker-launcher.svg?branch=master
+[travis-url]: https://travis-ci.org/kmyounes/docker-launcher
 
 ## Synopsis
 
