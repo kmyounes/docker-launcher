@@ -1,8 +1,8 @@
-#/bin/env python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import getopt
 import sys
-import os
 import docker
 
 
@@ -28,22 +28,22 @@ def main(argv):
             if opt in ("-a , --all"):
                 start_all()
     except getopt.GetoptError:
-        printUsage(True)
-        sys.exit(2)
+            printUsage(True)
+            sys.exit(2)
     except IndexError:
-        printUsage(True)
-        sys.exit(2)
+            printUsage(True)
+            sys.exit(2)
 
 def printUsage(error = False):
     if error:
         print ("Unknown option or missing argument.")
-    print("""
-    Usage: ./docker-launcher [options] <containers list file>
+        print("""
+        Usage: ./docker-launcher [options] <containers list file>
 
-    -h, --help              show this help
-    -f, --file             use specific file
-    -a, --all               launch all containers
-    """)
+        -h, --help              show this help
+        -f, --file             use specific file
+        -a, --all               launch all containers
+        """)
 
 def start_containers(f):
     f.seek(0)
