@@ -20,7 +20,7 @@ def main(argv):
         for opt, arg in opts:
             if opt in ("-h, --help"):
                 printUsage()
-                sys.exit(2)
+                sys.exit(0)
             if opt in ("-f, --file"):
                 print ("Reading File '" + arg +"'")
                 file=open(arg, 'r')
