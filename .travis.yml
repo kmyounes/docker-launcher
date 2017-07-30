@@ -4,4 +4,4 @@ python :
 install:
          - "pip install -r requirements.txt"
          - "pip install ."
-script: docker-launcher
+script: "docker-launcher -h"
